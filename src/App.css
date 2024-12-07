@@ -1,0 +1,180 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Page Layout */
+.page {
+  height: 100vh;
+  width: 100%;
+  background-color: #202020;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Heading */
+.heading {
+  font-size: 36px;
+  font-family: "EB Garamond", serif;
+  font-weight: 500;
+  color: #cecece;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+/* Current Balance */
+.current-balance {
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  background-color: #3a3a3a;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Input Fields Container */
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 30px;
+  width: 60%;
+}
+
+.amount-input,
+.category-input {
+  width: 48%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #636363;
+  background-color: #2b2b2b;
+  color: #fff;
+  font-size: 16px;
+}
+
+.amount-input:focus,
+.category-input:focus {
+  outline: none;
+  border-color: #70d061;
+}
+
+/* Main Options Container */
+.themainoptioncontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 500px;
+  height: 200px;
+  background-color: #1c1c1c;
+  border-radius: 20px;
+  border: #636363 1px solid;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Income Option */
+.containeroptionincome,
+.containeroptionexpense {
+  height: 85%;
+  width: 45%;
+  background-color: #1c1c1c;
+  border-radius: 20px;
+  border: #636363 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  transition: all 0.2s;
+}
+
+.containeroptionincome {
+  color: #5ba94b; /* Green for Income */
+}
+
+.containeroptionexpense {
+  color: #a94b4b; /* Red for Expense */
+}
+
+.containeroptionincome:hover {
+  box-shadow: #70d061 0px 0px 10px;
+  background-color: #181818;
+}
+
+.containeroptionexpense:hover {
+  box-shadow: #f06f6f 0px 0px 10px;
+  background-color: #181818;
+}
+
+/* Transaction List */
+.transactions {
+  width: 500px;
+  margin-top: 40px;
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #636363;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.transactions h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #bbbbbb;
+}
+
+.transactions ul {
+  list-style-type: none;
+}
+
+.transactions li {
+  padding: 10px;
+  border-bottom: 1px solid #636363;
+}
+
+.transactions li:last-child {
+  border-bottom: none;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 600px) {
+  .heading {
+    font-size: 28px;
+  }
+
+  .input-container {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .amount-input,
+  .category-input {
+    width: 100%;
+  }
+
+  .themmainoptioncontainer {
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+  }
+
+  .containeroptionincome,
+  .containeroptionexpense {
+    width: 90%;
+    margin: 10px 0;
+  }
+}
